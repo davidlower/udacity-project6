@@ -1,0 +1,165 @@
+* {
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   background-color: #3bb0e9;
+
+   font-family: 'Raleway', sans-serif;
+   font-size: 14px;
+   font-weight: 200;
+   --p-color: #0ed487;
+   --shadow: #cbcbcb;
+}
+
+.card-container {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+
+   width: 350px;
+   height: 600px;
+
+   -webkit-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+
+   border-radius: 5px;
+   background-color: white;
+   -webkit-box-shadow: 3px 3px 7px #038db9;
+   -webkit-box-shadow: 3px 5px 11px #04789d;
+   box-shadow: 3px 3px 7px #038db9;
+   box-shadow: 3px 5px 11px #04789d;
+}
+
+.img-container {
+   position: relative;
+
+   width: 150px;
+   height: 150px;
+   margin: 30px auto;
+}
+
+.img-container img {
+   width: 150px;
+   height: 150px;
+
+   border-radius: 100%;
+   -webkit-box-shadow: 1px 1px 2px var(--shadow);
+   box-shadow: 1px 1px 2px var(--shadow);
+}
+
+.fa-gamepad {
+   position: absolute;
+   z-index: 1;
+   right: 0px;
+   bottom: -10px;
+
+   color: var(--p-color);
+
+   font-size: 3rem;
+}
+
+.fa-gamepad:hover {
+   cursor: pointer;
+   -webkit-animation: spin 3s infinite linear;
+   animation: spin 3s infinite linear;
+}
+
+.card-container p {
+   margin: 0 auto;
+
+   text-align: center;
+   letter-spacing: 0.08rem;
+
+   font-size: 1.6rem;
+   font-weight: 600;
+}
+
+table {
+   width: 75%;
+   margin: 40px auto;
+
+   border-collapse: collapse;
+}
+
+table tr {
+   height: 45px;
+
+   border-bottom: solid 1px #e9e9e9;
+}
+
+.table-right {
+   text-align: right;
+}
+
+button {
+   position: absolute;
+   left: 50%;
+
+   width: 150px;
+   height: 40px;
+   margin: 20px auto;
+
+   cursor: pointer;
+   -webkit-transform: translateX(-50%);
+   transform: translateX(-50%);
+
+   color: white;
+   border: none;
+   border-radius: 5px;
+   outline: none;
+   background-color: var(--p-color);
+   -webkit-box-shadow: 1px 1px 2px var(--shadow);
+   box-shadow: 1px 1px 2px var(--shadow);
+
+   font-size: 1rem;
+}
+
+button:hover {
+   -webkit-transform: translateX(-50%) scale(0.95);
+   transform: translateX(-50%) scale(0.95);
+
+   -webkit-box-shadow: 1px 0 0 var(--shadow);
+   box-shadow: 1px 0 0 var(--shadow);
+}
+
+button:active {
+   -webkit-transform: translate(-50%, 1px) scale(0.95);
+   transform: translate(-50%, 1px) scale(0.95);
+
+   -webkit-box-shadow: none;
+   box-shadow: none;
+}
+
+@-webkit-keyframes spin {
+   0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+   }
+   50% {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+   }
+   100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+   }
+}
+
+@keyframes spin {
+   0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+   }
+   50% {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+   }
+   100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+   }
+}
