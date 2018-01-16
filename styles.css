@@ -129,16 +129,16 @@ button {
 }
 
 button:hover {
-   -webkit-transform: scale(0.95);
-   transform: scale(0.95);
+   -webkit-transform: scale(0.98);
+   transform: scale(0.98);
 
    -webkit-box-shadow: 1px 0 0 var(--shadow);
    box-shadow: 1px 0 0 var(--shadow);
 }
 
 button:active {
-   -webkit-transform: translateY(1px) scale(0.95);
-   transform: translateY(1px) scale(0.95);
+   -webkit-transform: translateY(1px) scale(0.98);
+   transform: translateY(1px) scale(0.98);
 
    -webkit-box-shadow: none;
    box-shadow: none;
