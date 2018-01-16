@@ -16,15 +16,18 @@ html {
 }
 
 .card-container {
-   position: absolute;
-   top: 50%;
-   left: 50%;
+   position: relative;
+
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: column;
+   flex-direction: column;
 
    width: 350px;
-   height: 600px;
-
-   -webkit-transform: translate(-50%, -50%);
-   transform: translate(-50%, -50%);
+   margin: 100px auto;
 
    border-radius: 5px;
    background-color: white;
@@ -37,9 +40,11 @@ html {
 .img-container {
    position: relative;
 
+   display: inline-block;
+
    width: 150px;
    height: 150px;
-   margin: 30px auto;
+   margin: 60px auto 30px;
 }
 
 .img-container img {
@@ -54,8 +59,8 @@ html {
 .fa-gamepad {
    position: absolute;
    z-index: 1;
-   right: 0px;
-   bottom: -8px;
+   right: -5px;
+   bottom: -5px;
 
    color: var(--p-color);
 
@@ -69,7 +74,7 @@ html {
 }
 
 .card-container p {
-   margin: 0 auto;
+   margin: 10px auto;
 
    text-align: center;
    letter-spacing: 0.08rem;
@@ -80,7 +85,7 @@ html {
 
 table {
    width: 75%;
-   margin: 40px auto;
+   margin: 30px auto;
 
    cursor: pointer;
 
@@ -102,16 +107,15 @@ table tr:hover {
 }
 
 button {
-   position: absolute;
-   left: 50%;
+   position: relative;
+
+   display: block;
 
    width: 150px;
    height: 40px;
-   margin: 20px auto;
+   margin: 30px auto 60px;
 
    cursor: pointer;
-   -webkit-transform: translateX(-50%);
-   transform: translateX(-50%);
 
    color: white;
    border: none;
@@ -125,16 +129,16 @@ button {
 }
 
 button:hover {
-   -webkit-transform: translateX(-50%) scale(0.95);
-   transform: translateX(-50%) scale(0.95);
+   -webkit-transform: scale(0.95);
+   transform: scale(0.95);
 
    -webkit-box-shadow: 1px 0 0 var(--shadow);
    box-shadow: 1px 0 0 var(--shadow);
 }
 
 button:active {
-   -webkit-transform: translate(-50%, 1px) scale(0.95);
-   transform: translate(-50%, 1px) scale(0.95);
+   -webkit-transform: translateY(1px) scale(0.95);
+   transform: translateY(1px) scale(0.95);
 
    -webkit-box-shadow: none;
    box-shadow: none;
@@ -167,11 +171,5 @@ button:active {
    100% {
       -webkit-transform: rotate(360deg);
       transform: rotate(360deg);
-   }
-}
-
-@media screen and (max-width: 768px) {
-   .card-container {
-      margin: 50px auto;
    }
 }
